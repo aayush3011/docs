@@ -11,7 +11,7 @@ the [langchain-azure](https://github.com/langchain-ai/langchain-azure) repositor
 
 We recommend developers start with the (`langchain-azure-ai`) to access all the models available in [Azure AI Foundry](https://learn.microsoft.com/en-us/azure/ai-studio/how-to/model-catalog-overview).
 
-### Azure AI Chat Completions Model
+### Azure AI chat completions
 
 Access models like Azure OpenAI, DeepSeek R1, Cohere, Phi and Mistral using the `AzureAIChatCompletionsModel` class.
 
@@ -76,22 +76,22 @@ embed_model = AzureAIEmbeddingsModel(
 
 ### Azure CosmosDB NoSQL Vector Search
 
-> [Azure CosmosDB NoSQL](https://azure.microsoft.com/en-us/products/cosmos-db/) is a fully managed, 
-> globally distributed, serverless document database for modern applications. It stores data in flexible 
-> JSON documents and uses a SQL-like query language. This provides high performance, low latency, and automatic, 
-> elastic scalability. It also features integrated vector search capabilities for AI workloads 
-> like generative AI and RAG. This allows you to store, index, and query vector embeddings alongside 
-> your operational data in the same database. You can combine vector similarity search with traditional 
-> keyword-based search for relevant results and choose from various indexing methods for optimal performance. 
-> This unified approach simplifies application architecture and ensures data consistency. 
+> [Azure CosmosDB NoSQL](https://azure.microsoft.com/en-us/products/cosmos-db/) is a fully managed,
+> globally distributed, serverless document database for modern applications. It stores data in flexible
+> JSON documents and uses a SQL-like query language. This provides high performance, low latency, and automatic,
+> elastic scalability. It also features integrated vector search capabilities for AI workloads
+> like generative AI and RAG. This allows you to store, index, and query vector embeddings alongside
+> your operational data in the same database. You can combine vector similarity search with traditional
+> keyword-based search for relevant results and choose from various indexing methods for optimal performance.
+> This unified approach simplifies application architecture and ensures data consistency.
 
 We need to install the `azure-cosmos` package to use this vector store.
 
 <CodeGroup>
-    ```bash pip 
+    ```bash pip
     pip install -qU azure-cosmos
     ```
-    
+
     ```bash uv
     uv add azure-cosmos
     ```
@@ -116,23 +116,23 @@ vector_search = AzureCosmosDBNoSqlVectorSearch.from_documents(
 )
 ```
 
-See a [usage example](/oss/python/integrations/vectorstores/azure_cosmos_db_no_sql).
+See a [usage example](/oss/integrations/vectorstores/azure_cosmos_db_no_sql).
 
 
 ### Azure CosmosDB Mongo vCore Vector Search
 
-> [Azure CosmosDB Mongo vCore](https://learn.microsoft.com/en-us/azure/cosmos-db/mongodb/vcore/) architecture makes 
-it easy to create a database with full native MongoDB support. You can apply your MongoDB experience and continue 
-to use your favorite MongoDB drivers, SDKs, and tools by pointing your application to the API for MongoDB (vCore) 
+> [Azure CosmosDB Mongo vCore](https://learn.microsoft.com/en-us/azure/cosmos-db/mongodb/vcore/) architecture makes
+it easy to create a database with full native MongoDB support. You can apply your MongoDB experience and continue
+to use your favorite MongoDB drivers, SDKs, and tools by pointing your application to the API for MongoDB (vCore)
 cluster's connection string.
 
 We need to install the `pymongo` package to use this vector store.
 
 <CodeGroup>
-    ```bash pip 
+    ```bash pip
     pip install -qU pymongo
     ```
-    
+
     ```bash uv
     uv add pymongo
     ```
@@ -151,4 +151,4 @@ vectorstore = AzureCosmosDBMongoVCoreVectorSearch.from_documents(
 )
 ```
 
-See a [usage example](/oss/python/integrations/vectorstores/azure_cosmos_db_mongo_vcore).
+See a [usage example](/oss/integrations/vectorstores/azure_cosmos_db_mongo_vcore).
