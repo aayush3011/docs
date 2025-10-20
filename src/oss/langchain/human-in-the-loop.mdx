@@ -2,14 +2,14 @@
 title: Human-in-the-loop
 ---
 
-import AlphaCalloutPy from '/snippets/alpha-lc-callout-py.mdx';
-import AlphaCalloutJS from '/snippets/alpha-lc-callout-js.mdx';
+import StableCalloutPy from '/snippets/stable-lc-callout-py.mdx';
+import StableCalloutJS from '/snippets/stable-lc-callout-js.mdx';
 
 :::python
-<AlphaCalloutPy />
+<StableCalloutPy />
 :::
 :::js
-<AlphaCalloutJS />
+<StableCalloutJS />
 :::
 
 The Human-in-the-Loop (HITL) middleware lets you add human oversight to agent tool calls.
@@ -49,6 +49,7 @@ You configure it with a mapping of tool actions to the decision types that are a
 from langchain.agents import create_agent
 from langchain.agents.middleware import HumanInTheLoopMiddleware # [!code highlight]
 from langgraph.checkpoint.memory import InMemorySaver # [!code highlight]
+
 
 agent = create_agent(
     model="openai:gpt-4o",

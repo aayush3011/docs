@@ -2,24 +2,25 @@
 title: MISSING_CHECKPOINTER
 ---
 
-import AlphaCallout from "/snippets/alpha-lg-callout.mdx";
+import StableCalloutPy from '/snippets/stable-lg-callout-py.mdx';
+import StableCalloutJS from '/snippets/stable-lg-callout-js.mdx';
 
 :::python
-<AlphaCalloutPy />
+<StableCalloutPy />
 :::
 :::js
-<AlphaCalloutJS />
+<StableCalloutJS />
 :::
 
 You are attempting to use built-in LangGraph persistence without providing a checkpointer.
 
-This happens when a `checkpointer` is missing in the `compile()` method of @[`StateGraph`][StateGraph] or @[`entrypoint`][entrypoint].
+This happens when a `checkpointer` is missing in the `compile()` method of @[`StateGraph`][StateGraph] or @[`@entrypoint`].
 
 ## Troubleshooting
 
 The following may help resolve this error:
 
--   Initialize and pass a checkpointer to the `compile()` method of @[`StateGraph`][StateGraph] or @[`entrypoint`][entrypoint].
+-   Initialize and pass a checkpointer to the `compile()` method of @[`StateGraph`][StateGraph] or @[`@entrypoint`].
 
 :::python
 

@@ -3,14 +3,14 @@ title: Multi-agent
 ---
 
 
-import AlphaCalloutPy from '/snippets/alpha-lc-callout-py.mdx';
-import AlphaCalloutJS from '/snippets/alpha-lc-callout-js.mdx';
+import StableCalloutPy from '/snippets/stable-lc-callout-py.mdx';
+import StableCalloutJS from '/snippets/stable-lc-callout-js.mdx';
 
 :::python
-<AlphaCalloutPy />
+<StableCalloutPy />
 :::
 :::js
-<AlphaCalloutJS />
+<StableCalloutJS />
 :::
 
 **Multi-agent systems** break a complex application into multiple specialized agents that work together to solve problems.
@@ -102,6 +102,7 @@ Below is a minimal example where the main agent is given access to a single suba
 ```python
 from langchain.tools import tool
 from langchain.agents import create_agent
+
 
 subagent1 = create_agent(..)
 
@@ -232,7 +233,7 @@ Two common strategies for shaping what the main agent receives back from a subag
   * A common failure mode is that the subagent performs tool calls or reasoning but does **not include the results** in its final message. Remind it that the controller (and user) only see the final output, so all relevant info must be included there.
 * **Custom output formatting** – adjust or enrich the subagent's response in code before handing it back to the main agent.
   * Example: pass specific state keys back to the main agent in addition to the final text.
-  * This requires wrapping the result in a `Command` (or equivalent structure) so you can merge custom state with the subagent’s response.
+  * This requires wrapping the result in a @[`Command`] (or equivalent structure) so you can merge custom state with the subagent’s response.
 
 :::python
 ```python

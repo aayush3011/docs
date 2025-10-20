@@ -10,12 +10,14 @@ The `docs/` directory contains the markdown files for the site, with the main en
 
 ## Contributing
 
-As these docs are built from the source code, the best way to contribute is to make changes in the source code itself. This can include:
+As these docs are built from the source code, the best way to contribute is to **make changes in the source code** itself. This can include:
 
 - Improving docstrings
 - Adding missing docstrings
 - Fixing typos
 - etc.
+
+You will notice that at the top of each page are two icons: one to view the page source, and the other to edit the page. The "view source" icon takes you to the markdown file for that page, while the "edit page" icon takes you to the relevant source code file in GitHub. Use these links to help you navigate to the right place to make your contributions.
 
 ---
 
@@ -46,12 +48,10 @@ This site is currently being migrated from a previous Sphinx-based implementatio
 - [ ] [Modernize annotations](https://mkdocstrings.github.io/python/usage/configuration/signatures/#modernize_annotations)
 - [ ] [Inheritance diagrams](https://mkdocstrings.github.io/python/usage/configuration/general/#show_inheritance_diagram)
 - [ ] Consider using [inherited docstrings](https://mkdocstrings.github.io/griffe/extensions/official/inherited-docstrings/)
-- [ ] Pydantic object refs preloading so that we link to them? Should find their tree and load it in (like we did for old LC)
 - [ ] Fix TOC shadow overflow (started in `reference/python/docs/stylesheets/toc.css`) but was funky
 - [ ] Post-processing step to link out to imports from code blocks
   - [ ] Maybe there's a plugin?
 - [ ] Fix `navigation.path` feature/plugin in `mkdocs.yml` not working
-- [ ] Resolve Griffe errors
 - [ ] Set up CI to fail on unexpected Griffe warnings
 - [ ] "Module last updated" auto-generation for module pages using source file commit timestamps or the MkDocs plugin [git-revision-date-localized](https://github.com/timvink/mkdocs-git-revision-date-localized-plugin)
 - [ ] Fix search magnifying glass icon color in dark mode
